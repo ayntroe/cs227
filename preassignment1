@@ -4,6 +4,7 @@ class BowlingGame {
   private int totalFrames = 0;
   private int currentFrame = 0;
   private boolean overCheck = false;
+  private int roll = 1;
   
   public void BowlingGame(int givenLastFrame) {
      totalFrames = givenLastFrame;
@@ -32,6 +33,23 @@ class BowlingGame {
   
   
   public void roll(int pins) {
+    if(currentFrame == totalFrames) {
+      overCheck = true;
+      break;
+    }
+    
+    if(roll<2 && pins < pinsUp) {
+      pinsUp -= pins;
+      roll += 1;
+    }
+    
+    pinsUp = 10;
+    currentFrame += 1;
+  }  
+      
+    
+        
+      
     
   
   
