@@ -1,0 +1,37 @@
+class BowlingGame {
+  
+  private int pinsUp = 0;
+  private int totalFrames = 0;
+  private int currentFrame = 0;
+  private boolean overCheck = false;
+  
+  public void BowlingGame(int givenLastFrame) {
+     totalFrames = givenLastFrame;
+     currentFrame = 1;
+     pinsUp = 10;
+  }
+  
+  public int getFrame() {
+    return currentFrame;
+  }
+  
+  public int getPinsUp() {
+    return pinsUp;
+  }
+  
+  public int getScore() {
+    return -1;
+  }
+  
+  public boolean isOver() {
+    return overCheck;
+  
+  public void reset() {
+    BowlingGame(totalFrames);
+  }
+  
+  
+  public void roll(int pins) {
+    
+  
+  
