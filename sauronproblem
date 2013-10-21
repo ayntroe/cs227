@@ -1,0 +1,25 @@
+import java.util.*;
+
+public class SaurLevel {
+public static long day = 0L;
+public static int digitCount;
+public static long levelCounter = 0L;
+	
+	public static void main(String[] args) {
+		
+		Scanner dayScanner = new Scanner(System.in);
+		while(dayScanner.hasNextLong() == true) {
+			day = dayScanner.nextLong();
+			for(long i = 7; i <= day; i++) {
+				if(Long.bitCount(i)%3 == 0) {
+			    	levelCounter += 1;	
+				}
+			}
+			System.out.println("Day "+day+": Level = "+levelCounter);
+			levelCounter = 0;
+		}
+	}
+
+}
+
+
